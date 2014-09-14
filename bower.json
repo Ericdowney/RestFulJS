@@ -1,0 +1,10 @@
+{
+  "name": "RestFulJS",
+  "version": "1.0.0",
+  "dependencies": {
+  	"jquery": "latest",
+    "handlebars": "latest",
+    "qunit": "latest"
+  },
+  "private": true
+}

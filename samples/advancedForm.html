@@ -1,0 +1,69 @@
+<html>
+
+	<head>
+		<script src="path/to/jquery.min.js"></script>
+		<script src="path/to/handlebars.min.js"></script>
+		<script src="path/to/RestFulJS.min.js"></script>
+	</head>
+
+	<body>
+		<rest-ful
+			data-rest-class="send"
+			data-rest-name="zipCodeForm"
+			data-rest-cross-domain="true"
+			data-rest-handlebars-template="rest-template"
+			data-rest-handlebars-content="handlebars-data-holder">
+		</rest-ful>
+	
+		<div>
+			<div>
+				URL: <input data-rest-attribute="url" data-rest-get="value">
+			</div>
+			<div>
+				Rest Type: <input data-rest-attribute="type">
+			</div>
+			<div>
+				Rest Username: <input data-rest-attribute="username">
+			</div>
+			<div>
+				Rest Password: <input data-rest-attribute="password">
+			</div>
+			<div>
+				Zip Code: <input data-rest-parameter="postalcode">
+			</div>
+			<div>
+				Country Initials: <input data-rest-parameter="country">
+			</div>
+			<div>
+				Username: <label data-rest-parameter="username" data-rest-get="innerText">edowney271</label>
+			</div>
+
+			<div>
+				<button data-rest-action="click" data-rest-action-for="zipCodeForm">Submit</button>
+			</div>
+		</div>
+
+		<script id="rest-template" type="text/x-handlebars-template">
+
+			{{#postalcodes}}
+			<div>Postal Code:</div>
+			<ul>
+				<li>{{placeName}}</li>
+				<li>{{postalcode}}</li>
+				<li>{{countryCode}}</li>
+				<li>{{lat}}</li>
+				<li>{{lng}}</li>
+			</ul>
+			
+			{{/postalcodes}}
+
+		</script>
+
+		<div id="handlebars-data-holder">
+		</div>
+
+	</body>
+</html>
+
+<!-- http://api.geonames.org/postalCodeLookupJSON -->
+

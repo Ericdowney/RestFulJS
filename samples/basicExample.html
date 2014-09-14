@@ -1,0 +1,42 @@
+<html>
+
+	<head>
+		<script src="path/to/jquery.min.js"></script>
+		<script src="path/to/handlebars.min.js"></script>
+		<script src="path/to/RestFulJS.min.js"></script>
+	</head>
+
+	<body>
+		<rest-ful
+			data-rest-class="pull"
+			data-rest-url="http://api.geonames.org/postalCodeLookupJSON"
+			data-rest-cross-domain="true"
+			data-rest-handlebars-template="rest-template"
+			data-rest-handlebars-content="handlebars-data-holder">
+			{
+				postalcode: 6600,
+				username: "<your-username-here>"
+			}
+		</rest-ful>
+
+		<script id="rest-template" type="text/x-handlebars-template">
+
+			{{#postalcodes}}
+			<div>Postal Code:</div>
+			<ul>
+				<li>{{placeName}}</li>
+				<li>{{postalcode}}</li>
+				<li>{{countryCode}}</li>
+				<li>{{lat}}</li>
+				<li>{{lng}}</li>
+			</ul>
+			{{/postalcodes}}
+
+		</script>
+
+		<div id="handlebars-data-holder">
+		</div>
+
+	</body>
+
+</html>
