@@ -2,10 +2,12 @@ RestFulJS
 =========
 
 Intro
+=========
 ​
     RestFulJS gives the user the power to define Ajax in HTML.  With Ajax in HTML you can focus on the look and feel of your website without having to worry about writing javascript and setting up a custom ajax call.  For the purpose of this documentation, I will be using an API provided by http://www.geonames.org. Register an account and provide your username in the examples.  The url will be "http://api.geonames.org/postalCodeLookupJSON".
 
 Getting Started
+=========
 ​
     To get started, download RestFulJS and the latest version of JQuery at http://jquery.com/download/. Include them in your HTML file.
 
@@ -36,6 +38,7 @@ Getting Started
 	</rest-ful>
 
 Handlebars Integration
+=========
 ​
      "Handlebars provides the power necessary to let you build semantic templates effectively with no frustration." (http://handlebarsjs.com/) Handlebars is a way to create HTML templates and bind data to those templates. When integrated with RestFulJS, the data that is returned by the ajax call will be bound to your handlebars template.  To add Handlebars to the "rest-ful" tag you will need to first download the latest HandlebarsJS at http://handlebarsjs.com/ and then add these two attributes.
 
@@ -61,6 +64,7 @@ Handlebars Integration
 	Now, when you visit your HTML page, the "rest-ful" tag will bind the data that is returned to the Handlebars template and display the information inside the Handlebars content.	
 
 Advanced
+=========
 
 	So far you have seen how to get started with RestFulJS and even how to integrate with Handlebars.  Hopefully, its been simple so far because it's about to get complicated.  Up until now, when you have been using the "rest-ful" tag, it has been using the default class "pull".  This default class means the "rest-ful" tag will make the ajax call when the Dom loads.  There is a second class for the "rest-ful" tag that allows the tag to wait for an action to occur. This class is the "send" class.  To change the class of your "rest-ful" tag, add the attribute
 
@@ -98,6 +102,7 @@ Advanced
 	That's it!  You now have all the tools necessary to effectively use RestFulJS in any of your HTML pages for any of your ajax needs.  Now try all different kinds of configurations and different Rest api's.
 
 Attribute & Parameter Reference
+=========
 
 	Attributes on "rest-ful" tag
 		data-rest-class= "pull", "send"
